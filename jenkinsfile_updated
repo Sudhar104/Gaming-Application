@@ -10,7 +10,7 @@ pipeline {
     }
     
     stages {
-        stage(' CHECKOUT') {
+        stage(' GIT CHECKOUT') {
             steps {
                git branch: 'main', url: 'https://github.com/VM2322/Vivek-s-Gaming-Application'
             }
@@ -73,7 +73,7 @@ pipeline {
             }
         }   
             
-        stage('final DEPLOYMENT') {
+        stage('DOCKER DEPLOYMENT') {
             steps {
                 sh "docker run -d -p 8090:8080 vm2322/gaming:latest"
             }
