@@ -10,7 +10,7 @@ pipeline {
     }
     
     stages {
-        stage(' GIT  CHECKOUT') {
+        stage(' GITCHECKOUT') {
             steps {
                git branch: 'main', url: 'https://github.com/sudhar104/Gaming-Application.git'
             }
